@@ -1,0 +1,130 @@
+@import "./base/index";
+
+:root {
+    font-size: 18px;
+}
+body {
+    @extend .mulish;
+    width: 80vw;
+    margin: 36px auto;
+
+    // temp
+    min-height: 300vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    // background-color: rgb(248, 208, 208);
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    nav {
+        // background-color: red;
+        display: flex;
+        gap: 40px;
+
+        a {
+            color: #1f1534;
+            font-size: 1em;
+            opacity: 50%;
+
+            &.selected {
+                @extend .mulish-700;
+                opacity: 100%;
+            }
+        }
+    }
+}
+
+#hero-section {
+    height: 70vh;
+    margin-bottom: 16vh;
+
+    align-items: center;
+}
+
+section {
+    display: flex;
+    margin-bottom: 240px;
+    gap: 60px;
+    // background-color: red;
+
+    h2 {
+        font-size: 2em;
+        position: relative;
+        // background-color: red;
+        width: fit-content;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: -50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 32%;
+            height: 3px;
+            border-radius: 500px;
+            background-color: black;
+        }
+    }
+}
+
+#services {
+    flex-direction: column;
+    align-items: center;
+    p {
+        width: fit-content;
+        text-align: center;
+        max-width: 72%;
+        color: #7d7987;
+        line-height: 30px;
+    }
+}
+
+.img-section {
+    display: flex;
+    // background-color: red;
+    gap: 10%;
+    // padding: 0 100px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 200px;
+        width: 64%;
+
+        h1,
+        h2,
+        p {
+            max-width: 64%;
+        }
+        h2 {
+            margin-bottom: 40px;
+            &::after {
+                content: "";
+                // background-color: red !important;
+                margin: 0;
+                width: 16%;
+                bottom: -20%;
+            }
+        }
+        p {
+            color: #7d7987;
+            line-height: 28px;
+            margin-bottom: 32px;
+        }
+        button {
+            background-color: #458ff6;
+            color: white;
+            border: none;
+            padding: 8px 30px;
+            font-size: 1em;
+        }
+    }
+    img {
+    }
+}

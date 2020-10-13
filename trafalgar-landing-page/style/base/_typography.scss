@@ -1,0 +1,19 @@
+.mulish {
+    font-family: "Mulish";
+}
+
+$fonts: (
+    "mulish": (
+        400,
+        700,
+    ),
+);
+
+@each $font, $weights in $fonts {
+    @each $wght in $weights {
+        .#{$font}-#{$wght} {
+            @extend .#{$font};
+            font-weight: $wght;
+        }
+    }
+}
