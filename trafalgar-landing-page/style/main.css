@@ -1,4 +1,4 @@
-.mulish, .mulish-400, .mulish-700, button, header nav a.selected, body {
+.mulish, .mulish-400, .mulish-700, button, header nav a.selected, footer h4, body {
   font-family: "Mulish";
 }
 
@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.mulish-700, button, header nav a.selected {
+.mulish-700, button, header nav a.selected, footer h4 {
   font-weight: 700;
 }
 
@@ -183,4 +183,47 @@ section h2::after {
   border: none;
   padding: 8px 30px;
   font-size: 1em;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 80px 10vw;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 100px;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+footer .link-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+footer a {
+  color: white;
 }

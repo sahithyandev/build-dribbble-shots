@@ -128,3 +128,34 @@ section {
     img {
     }
 }
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 80px 10vw;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; //repeat(4, auto);
+    gap: 100px;
+    background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+    align-items: center;
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .link-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    h4 {
+        @extend .mulish-700;
+    }
+    a {
+        color: white;
+    }
+}
