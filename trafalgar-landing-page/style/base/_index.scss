@@ -1,5 +1,9 @@
 @import "./typography";
 
+.material-icon {
+    font-family: "Material Icons";
+}
+
 // Overrides
 
 * {
@@ -15,13 +19,25 @@ a {
     text-decoration: none;
     color: black;
 }
+a::after {
+    content: attr(data-icon);
+    @extend .material-icon;
+}
 
 button {
     @extend .mulish-700;
+    display: inline-flex;
+    align-items: center;
     border-radius: 500px;
-    font-size: 1em;
+    font-size: 0.8em !important;
     border: 1px solid rgb(110, 110, 110);
-    padding: 10px 20px;
+    padding: 12px 24px !important;
     cursor: pointer;
     width: fit-content;
+}
+
+button::after {
+    @extend .material-icon;
+    margin-left: 6px;
+    content: attr(data-icon);
 }

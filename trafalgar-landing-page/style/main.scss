@@ -1,4 +1,5 @@
 @import "./base/index";
+@import "./component/index";
 
 :root {
     font-size: 18px;
@@ -10,6 +11,20 @@ body {
 
     // temp
     min-height: 300vh;
+}
+
+.button--primary {
+    background-color: #458ff6;
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    font-size: 1em;
+}
+
+.button--secondary {
+    background-color: #ffffff;
+    color: #458ff6;
+    border: 1px solid #458ff6;
 }
 
 header {
@@ -38,7 +53,7 @@ header {
 }
 
 #hero-section {
-    height: 70vh;
+    height: 80vh;
     margin-bottom: 16vh;
 
     align-items: center;
@@ -72,19 +87,7 @@ section {
     }
 }
 
-#services {
-    flex-direction: column;
-    align-items: center;
-    p {
-        width: fit-content;
-        text-align: center;
-        max-width: 72%;
-        color: #7d7987;
-        line-height: 30px;
-    }
-}
-
-.img-section {
+.section--image {
     display: flex;
     // background-color: red;
     gap: 10%;
@@ -117,16 +120,34 @@ section {
             line-height: 28px;
             margin-bottom: 32px;
         }
-        button {
-            background-color: #458ff6;
-            color: white;
-            border: none;
-            padding: 8px 30px;
-            font-size: 1em;
-        }
     }
-    img {
+}
+
+.section--normal {
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        width: fit-content;
+        text-align: center;
+        max-width: 72%;
+        color: #7d7987;
+        line-height: 30px;
     }
+}
+
+.service-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    // background-color: red;
+    justify-content: center;
+}
+
+.article-cards-container {
+    gap: 16px;
+    display: flex;
 }
 
 footer {
@@ -154,6 +175,7 @@ footer {
     }
     h4 {
         @extend .mulish-700;
+        margin-bottom: 1em;
     }
     a {
         color: white;

@@ -1,0 +1,22 @@
+.logo {
+    fill: none;
+    --text-color: #233348;
+    --circle-color: #458ff6;
+    --inner-t-color: white;
+
+    .logo-text {
+        fill: var(--text-color);
+    }
+    .logo-circle-bg {
+        fill: var(--circle-color);
+    }
+    .inner-letter-t {
+        fill: var(--inner-t-color);
+    }
+}
+.logo--light {
+    @extend .logo;
+    --text-color: white;
+    --circle-color: white;
+    --inner-t-color: #5b9bf3;
+}
