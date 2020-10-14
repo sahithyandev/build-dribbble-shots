@@ -1,3 +1,9 @@
+<style>
+table {
+    width: 100%;
+}
+</style>
+
 <h1 align="center">Build Dribbble shots</h1>
 
 For practice, I started building some dribbble shots.
