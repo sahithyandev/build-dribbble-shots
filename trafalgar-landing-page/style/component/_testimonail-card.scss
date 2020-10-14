@@ -1,14 +1,20 @@
 .testimonial-card {
-    // background-color: rgba(22, 72, 211, 0.719);
-    display: flex;
+    display: grid;
     align-items: center;
     color: inherit;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 100%;
+    grid-template-areas: "img details content";
     gap: 32px;
 
     .testimonial-card__user-img {
-        max-width: 360px;
+        grid-area: img;
+        width: 100%;
+        height: auto;
+        // max-width: 360px;
     }
     .testimonial-card__user-details {
+        grid-area: details;
         width: max-content;
         display: flex;
         flex-direction: column;
@@ -24,15 +30,26 @@
     }
 
     .testimonial-card__content {
-        display: inline-block;
-        width: fit-content;
+        grid-area: content;
         max-width: 360px;
         line-height: 28px;
         &::before {
             content: '"';
         }
         &::after {
-            content: close-quote;
+            content: '"';
         }
+    }
+}
+
+@include mobile {
+    .testimonial-card {
+        // background-color: rgb(197, 189, 189);
+        // background-color: red;
+        grid-template-columns: 80px auto;
+        grid-template-rows: 90px auto;
+        grid-template-areas: "img details" "content content";
+        row-gap: 10px;
+        column-gap: 12px;
     }
 }

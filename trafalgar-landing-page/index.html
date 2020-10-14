@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Home | Trafalgar</title>
         <link rel="stylesheet" href="./style/main.css" />
         <link
@@ -15,7 +15,7 @@
             rel="stylesheet"
         />
     </head>
-    <body>
+    <body data-nav-toggled="false">
         <header>
             <div class="brand">
                 <svg class="logo" width="160" height="41" viewBox="0 0 160 41">
@@ -36,6 +36,11 @@
                 </svg>
 
                 <!-- <img src="./assets/logo.svg" alt="logo" /> -->
+            </div>
+
+            <div class="nav-icon">
+                <!-- Show icon using ::after -->
+                <!-- <i class="material-icons">menu</i> -->
             </div>
 
             <nav>
@@ -59,6 +64,7 @@
             <img
                 src="./assets/trafalgar-header-illustration.png"
                 alt="illustration"
+                class="section--image__image"
             />
         </section>
 
@@ -131,6 +137,7 @@
             <img
                 src="./assets/trafalgar-illustration-sec02.png"
                 alt="illustration"
+                class="section--image__image"
             />
             <div>
                 <h2>Leading healthcare providers</h2>
@@ -154,12 +161,12 @@
                     Download
                 </button>
             </div>
-            <img src="./assets/trafalgar-illustration-sec03.png" alt="" />
+            <img
+                src="./assets/trafalgar-illustration-sec03.png"
+                class="section--image__image"
+                alt=""
+            />
         </section>
-
-        <!--
-            TK Horizontal Scrolling
-        -->
         <section id="testimonials" class="section--normal">
             <h2 class="">What our customer are saying</h2>
 

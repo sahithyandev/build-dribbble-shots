@@ -4,15 +4,31 @@
 :root {
     font-size: 18px;
 }
+html,
+body {
+    overflow-x: hidden;
+}
+html {
+    scroll-padding: 40px 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: 100px;
+}
 body {
     @extend .mulish;
     width: 80vw;
     margin: 36px auto;
 
-    // temp
-    min-height: 300vh;
+    @include mobile {
+        margin: 20px auto;
+        width: 92vw;
+        // width: 100vw;
+    }
 }
-
+body[data-nav-toggled="true"] {
+    .nav-icon::before {
+        content: "close";
+    }
+}
 .button--primary {
     --background-color: #458ff6;
     --color: white;
@@ -33,9 +49,30 @@ header {
     justify-content: space-between;
     margin-bottom: 40px;
 
+    .nav-icon {
+        &::before {
+            content: "menu";
+            @extend .material-icon;
+            font-size: 1.4rem;
+        }
+
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
+
     nav {
         display: flex;
         gap: 40px;
+        transition: transform none, all 0.3s ease-in-out;
+
+        @include mobile {
+            opacity: 0;
+            // display: none;
+            transform: scale(0);
+            position: absolute;
+        }
 
         a {
             @extend .mulish-400;
@@ -68,6 +105,20 @@ header {
             }
         }
     }
+
+    .toggled-nav {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(204, 221, 236);
+        top: 10%;
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        align-items: center;
+        gap: 16px;
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #hero-section {
@@ -75,6 +126,14 @@ header {
     margin-bottom: 16vh;
 
     align-items: center;
+    @include mobile {
+        // background-color: red;
+        height: 64vh;
+
+        .button--primary {
+            font-size: 1em !important;
+        }
+    }
 }
 
 section {
@@ -102,6 +161,10 @@ section {
             height: 3px;
             border-radius: 500px;
             background-color: var(--color, black);
+
+            @include mobile {
+                bottom: -20%;
+            }
         }
     }
     .section__description {
@@ -111,13 +174,18 @@ section {
         color: #7d7987;
         line-height: 30px;
     }
+    @include mobile {
+        margin-bottom: 100px;
+        .section__description {
+            max-width: 90%;
+        }
+    }
 }
 
 .section--image {
     display: flex;
-    // background-color: red;
+    align-items: center;
     gap: 10%;
-    // padding: 0 100px;
 
     div {
         display: flex;
@@ -147,33 +215,72 @@ section {
             margin-bottom: 32px;
         }
     }
+
+    .section--image__image {
+        max-width: 40%;
+
+        height: auto;
+    }
+    @include mobile {
+        flex-direction: column-reverse;
+        gap: 20px;
+
+        div {
+            width: 100%;
+            align-items: center;
+            h1,
+            h2,
+            p {
+                max-width: 94%;
+            }
+        }
+        .section--image__image {
+            width: 86%;
+            order: 1;
+        }
+    }
 }
 
 .section--normal {
     flex-direction: column;
     align-items: center;
+    @include mobile {
+        h2 {
+            text-align: center;
+        }
+    }
 }
 
 #testimonials {
     background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
-    padding: 40px 0;
+    padding: 40px 10px;
     color: white;
     border-radius: 24px;
     height: 360px;
+
+    @include mobile {
+        height: 480px;
+        // height: fit-content;
+    }
     h2 {
         --color: white;
         --underline-width: 40px;
+        margin-bottom: 0px;
     }
 
     .testimonial-scroll {
-        // background-color: rgb(230, 82, 82);
-        width: 72%;
+        // width: 72%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .testimonial-card {
-            margin: 24px 0 60px;
+            margin: 24px 0 64px;
+
+            @include mobile {
+                padding: 4px 20px;
+                margin: 0 0 56px;
+            }
         }
         .testimonial-scroll__scroll-controls {
             --color: #5b9bf3;
@@ -221,11 +328,26 @@ section {
     gap: 20px;
     // background-color: red;
     justify-content: center;
+
+    .service-card {
+        width: 28%;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        .service-card {
+            width: 100%;
+        }
+    }
 }
 
 .article-cards-container {
     gap: 16px;
     display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 footer {
@@ -235,7 +357,7 @@ footer {
     padding: 80px 10vw;
     color: white;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr; //repeat(4, auto);
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 100px;
     background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
     align-items: center;
@@ -257,5 +379,20 @@ footer {
     }
     a {
         color: white;
+    }
+
+    @include mobile {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+
+        .link-section {
+            // background-color: red;
+            gap: 6px;
+        }
+
+        h4 {
+            margin-bottom: 0.6em;
+        }
     }
 }
