@@ -3,5 +3,9 @@
 For practice, I started building some dribbble shots.
 The details about the shots can be found down.
 
-Trafalgar Landing Page - https://dribbble.com/shots/12514026--FIGMA-FREEBIE-Landing-page-for-a-healthcare-startup
-Color Picker - https://dribbble.com/shots/11146660-Color-Picker-FREEBIE
+If you find any problems with this README, open an issue.
+
+| Challenge Name                                                                                                             | Designed By                                                                                                                       | Status      |
+| -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Trafalgar Landing Page](./trafalgar-landing-page) ([Demo](http://build-dribbble-shots.vercel.app/trafalgar-landing-page)) | [Aryo Pamungkas for SLAB Design Studio](https://dribbble.com/shots/12514026--FIGMA-FREEBIE-Landing-page-for-a-healthcare-startup) | Completed   |
+| [Color Picker](./color-picker) ([Demo](http://build-dribbble-shots.vercel.app/color-picker))                               | [Phil Goodwin for FiveBox](https://dribbble.com/shots/11146660-Color-Picker-FREEBIE)                                              | In Progress |
