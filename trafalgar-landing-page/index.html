@@ -64,7 +64,7 @@
 
         <section id="services" class="section--normal">
             <h2>Our services</h2>
-            <p>
+            <p class="section__description">
                 We provide to you the best choiches for you. Adjust it to your
                 health needs and make sure your undergo treatment with our
                 highly qualified doctors you can consult with us which type of
@@ -158,11 +158,41 @@
         </section>
 
         <!--
-        TK Horizontal Scrolling
-        <section>
-            <h2>What our customer are saying</h2>
+            TK Horizontal Scrolling
+        -->
+        <section id="testimonials" class="section--normal">
+            <h2 class="">What our customer are saying</h2>
+
+            <div class="testimonial-scroll">
+                <div class="testimonial-card">
+                    <img
+                        class="testimonial-card__user-img"
+                        src="./assets/user.png"
+                        alt="user"
+                    />
+                    <div class="testimonial-card__user-details">
+                        <span class="testimonial-card__user-name"
+                            >Edward Newgate</span
+                        >
+                        <span class="testimonial-card__user-info"
+                            >Founder Circle</span
+                        >
+                    </div>
+                    <p class="testimonial-card__content">
+                        Our dedicated patient engagement app and web portal
+                        allow you to access information instantaneously (no
+                        tedeous form, long calls, or administrative hassle) and
+                        securely
+                    </p>
+                </div>
+
+                <div class="testimonial-scroll__scroll-controls">
+                    <i class="material-icons previous">west</i>
+                    <i class="material-icons circle">circle</i>
+                    <i class="material-icons next">east</i>
+                </div>
+            </div>
         </section>
-    -->
 
         <section class="section--normal">
             <h2>Check out our latest article</h2>
@@ -170,49 +200,74 @@
                 <div class="article-card">
                     <img
                         alt="article preview"
+                        class="article-card__preview"
                         src="./assets/disease-detection.png"
                     />
-                    <h3 class="article-card__heading">
-                        Disease detection, check up in the laboratory
-                    </h3>
-                    <p class="article-card__description">
-                        In this case, the role of the health laboratory is very
-                        important to do a disease detection...
-                    </p>
+                    <div class="article-card__body">
+                        <h3 class="article-card__heading">
+                            Disease detection, check up in the laboratory
+                        </h3>
+                        <p class="article-card__description">
+                            In this case, the role of the health laboratory is
+                            very important to do a disease detection...
+                        </p>
 
-                    <a href="#" data-icon="east">Read more</a>
+                        <a
+                            href="#"
+                            class="article-card__read-more"
+                            data-icon="east"
+                            >Read more</a
+                        >
+                    </div>
                 </div>
                 <div class="article-card">
                     <img
                         alt="article preview"
+                        class="article-card__preview"
                         src="./assets/herbal-medicines.png"
                     />
-                    <h3 class="article-card__heading">
-                        Herbal medicines that are safe for consumption
-                    </h3>
-                    <p class="article-card__description">
-                        Herbal medicine is very widely used at this time because
-                        of its very good for your health...
-                    </p>
+                    <div class="article-card__body">
+                        <h3 class="article-card__heading">
+                            Herbal medicines that are safe for consumption
+                        </h3>
+                        <p class="article-card__description">
+                            Herbal medicine is very widely used at this time
+                            because of its very good for your health...
+                        </p>
 
-                    <a href="#" data-icon="east">Read more</a>
+                        <a
+                            href="#"
+                            class="article-card__read-more"
+                            data-icon="east"
+                            >Read more</a
+                        >
+                    </div>
                 </div>
                 <div class="article-card">
                     <img
                         alt="article preview"
+                        class="article-card__preview"
                         src="./assets/natural-care.png"
                     />
-                    <h3 class="article-card__heading">
-                        Natural care for healthy facial skin
-                    </h3>
-                    <p class="article-card__description">
-                        A healthy lifestyle should start from now and also for
-                        your skin health. There are some...
-                    </p>
+                    <div class="article-card__body">
+                        <h3 class="article-card__heading">
+                            Natural care for healthy facial skin
+                        </h3>
+                        <p class="article-card__description">
+                            A healthy lifestyle should start from now and also
+                            for your skin health. There are some...
+                        </p>
 
-                    <a href="#" data-icon="east">Read more</a>
+                        <a
+                            href="#"
+                            class="article-card__read-more"
+                            data-icon="east"
+                            >Read more</a
+                        >
+                    </div>
                 </div>
             </div>
+            <button class="button--secondary">View all</button>
         </section>
     </body>
     <footer>

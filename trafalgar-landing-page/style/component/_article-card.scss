@@ -1,5 +1,31 @@
 .article-card {
-    background-color: red;
-    width: fit-content;
+    background-color: white;
+    width: 350px;
+    border-radius: 20px;
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+
+    .article-card__preview {
+        width: 100%;
+    }
+
+    .article-card__body {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .article-card__heading {
+            width: 85%;
+        }
+
+        .article-card__description {
+            margin-bottom: 20px;
+            max-width: 100% !important;
+            text-align: left !important;
+        }
+
+        .article-card__read-more {
+            margin-bottom: 10px;
+        }
+    }
 }

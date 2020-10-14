@@ -1,0 +1,38 @@
+.testimonial-card {
+    // background-color: rgba(22, 72, 211, 0.719);
+    display: flex;
+    align-items: center;
+    color: inherit;
+    gap: 32px;
+
+    .testimonial-card__user-img {
+        max-width: 360px;
+    }
+    .testimonial-card__user-details {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        margin-right: 120px;
+
+        .testimonial-card__user-name {
+            @extend .mulish-700;
+            width: max-content;
+        }
+        .testimonial-card__user-info {
+            @extend .mulish-400;
+        }
+    }
+
+    .testimonial-card__content {
+        display: inline-block;
+        width: fit-content;
+        max-width: 360px;
+        line-height: 28px;
+        &::before {
+            content: '"';
+        }
+        &::after {
+            content: close-quote;
+        }
+    }
+}
