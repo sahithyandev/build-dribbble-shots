@@ -1,0 +1,12 @@
+[
+    {
+        "challenge-name": "Trafalgar Landing Page",
+        "challenge-directory": "./trafalgar-landing-page/",
+        "progress": "completed"
+    },
+    {
+        "challenge-name": "Color Picker",
+        "challenge-directory": "./color-picker/",
+        "progress": "paused"
+    }
+]

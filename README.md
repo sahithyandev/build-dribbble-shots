@@ -5,7 +5,11 @@ The details about the shots can be found down.
 
 If you find any problems with this README, open an issue.
 
-| Challenge Name                                                                                                             | Designed By                                                                                                                       | Status      |
-| -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Trafalgar Landing Page](./trafalgar-landing-page) ([Demo](http://build-dribbble-shots.vercel.app/trafalgar-landing-page)) | [Aryo Pamungkas for SLAB Design Studio](https://dribbble.com/shots/12514026--FIGMA-FREEBIE-Landing-page-for-a-healthcare-startup) | Completed   |
-| [Color Picker](./color-picker) ([Demo](http://build-dribbble-shots.vercel.app/color-picker))                               | [Phil Goodwin for FiveBox](https://dribbble.com/shots/11146660-Color-Picker-FREEBIE)                                              | In Progress |
+## Challenge Details
+
+Status "**Paused**" means the challenge is stopped for some reason. I might resume the challenge later. But for now, I will not work on the challenge.
+
+| Challenge Name                                                                                                             | Designed By                                                                                                                       | Status    |
+| -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| [Trafalgar Landing Page](./trafalgar-landing-page) ([Demo](http://build-dribbble-shots.vercel.app/trafalgar-landing-page)) | [Aryo Pamungkas for SLAB Design Studio](https://dribbble.com/shots/12514026--FIGMA-FREEBIE-Landing-page-for-a-healthcare-startup) | Completed |
+| [Color Picker](./color-picker) ([Demo](http://build-dribbble-shots.vercel.app/color-picker))                               | [Phil Goodwin for FiveBox](https://dribbble.com/shots/11146660-Color-Picker-FREEBIE)                                              | Paused    |
