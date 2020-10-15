@@ -2,11 +2,22 @@
     {
         "challenge-name": "Trafalgar Landing Page",
         "challenge-directory": "./trafalgar-landing-page/",
-        "progress": "completed"
+        "designed-by": "Aryo Pamungkas for SLAB Design Studio",
+        "dribbble-link": "https://dribbble.com/shots/12514026--FIGMA-FREEBIE-Landing-page-for-a-healthcare-startup",
+        "status": "completed"
     },
     {
         "challenge-name": "Color Picker",
         "challenge-directory": "./color-picker/",
-        "progress": "paused"
+        "designed-by": "Phil Goodwin for FiveBox",
+        "dribbble-link": "https://dribbble.com/shots/11146660-Color-Picker-FREEBIE",
+        "status": "paused"
+    },
+    {
+        "challenge-name": "Data Warehouse homepage",
+        "challenge-directory": "./data-warehouse-homepage",
+        "designed-by": "Aryo Pamungkas for SLAB Design Studio",
+        "dribbble-link": "https://dribbble.com/shots/10058339-FIGMA-FREEBIES-Data-warehouse-homepage",
+        "status": "in-progress"
     }
 ]
