@@ -1,0 +1,28 @@
+.roboto {
+    font-family: "Roboto";
+}
+.nunito {
+    font-family: "Nunito";
+}
+
+$fonts: (
+    "roboto": (
+        400,
+        500,
+        700,
+    ),
+    "nunito": (
+        400,
+        600,
+        700,
+    ),
+);
+
+@each $font, $weights in $fonts {
+    @each $wght in $weights {
+        .#{$font}-#{$wght} {
+            @extend .#{$font};
+            font-weight: $wght;
+        }
+    }
+}

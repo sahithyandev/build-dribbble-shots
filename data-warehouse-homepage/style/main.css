@@ -1,1 +1,246 @@
-/* No CSS */
+.roboto, .roboto-400, .roboto-500, .roboto-700, h1, h2, h3, h4, h5, body {
+  font-family: "Roboto";
+}
+
+.nunito, .nunito-400, .nunito-600, header nav, .section .section--description, .section--type-2 .section--description, .nunito-700 {
+  font-family: "Nunito";
+}
+
+.roboto-400 {
+  font-weight: 400;
+}
+
+.roboto-500 {
+  font-weight: 500;
+}
+
+.roboto-700, h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+.nunito-400 {
+  font-weight: 400;
+}
+
+.nunito-600, header nav, .section .section--description, .section--type-2 .section--description {
+  font-weight: 600;
+}
+
+.nunito-700 {
+  font-weight: 700;
+}
+
+.material-icon, a[data-icon-position="right"]::after,
+button[data-icon-position="right"]::after {
+  font-family: "Material Icons";
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+a[data-icon-position="right"],
+button[data-icon-position="right"] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a[data-icon-position="right"]::after,
+button[data-icon-position="right"]::after {
+  font-size: 20px;
+  margin-left: 10px;
+  content: attr(data-icon);
+}
+
+h1 {
+  color: #212353;
+}
+
+h2 {
+  color: #212353;
+}
+
+h3 {
+  color: #212353;
+}
+
+h4 {
+  color: #212353;
+}
+
+h5 {
+  color: #212353;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.button, .button--primary, .button--secondary {
+  border-radius: 500px;
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.button--primary {
+  background: #9c69e2;
+  color: white;
+}
+
+.button--primary:hover {
+  background: #724da7;
+}
+
+.button--secondary {
+  color: #212353;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+          box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+}
+
+.button--secondary:hover {
+  background: #dddddd;
+}
+
+.button--secondary::after, .button--secondary::before {
+  color: #9c69e2;
+}
+
+.service-card .service-card__heading {
+  text-transform: capitalize;
+}
+
+:root {
+  font-family: 16px;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6fafd), color-stop(19.4%, #ffffff));
+  background-image: linear-gradient(180deg, #f6fafd 0%, #ffffff 19.4%);
+  background-repeat: no-repeat;
+  margin: 20px auto;
+  width: 82vw;
+  min-height: 300vh;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 5vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+header nav li {
+  color: #4b5d68;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+header nav li.selected {
+  font-weight: 700 !important;
+  color: #212353;
+}
+
+.section, .section--type-2 {
+  margin-bottom: 100px;
+}
+
+.section .section--description, .section--type-2 .section--description {
+  font-size: 1em;
+  letter-spacing: 0em;
+  color: #4b5d68;
+}
+
+#hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 72px 0 80px;
+}
+
+#hero-section * {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#hero-section h1 {
+  max-width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#hero-section .section--description {
+  max-width: 28%;
+  line-height: 29px;
+  margin-bottom: 40px;
+}
+
+#hero-section img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 56%;
+}
+
+.section--type-2 {
+  width: 80%;
+  margin: auto;
+  border-radius: 50px;
+  background: rgba(240, 99, 184, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 80px 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  gap: 20px;
+}
+
+.section--type-2 img {
+  width: 45%;
+}
+
+.section--type-2 .section--description {
+  line-height: 160%;
+  width: 88%;
+}
