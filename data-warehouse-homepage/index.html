@@ -10,6 +10,10 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
+        <script
+            src="https://kit.fontawesome.com/4211b4cc5d.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <header>
@@ -31,7 +35,7 @@
             </button>
         </header>
         <main>
-            <section class="section" id="hero-section">
+            <section id="hero-section">
                 <h1>Save your data storage here.</h1>
                 <p class="section--description">
                     Data Warehouse is a data storage area that has been tested
@@ -42,7 +46,7 @@
                 <img src="./assets/image-1.png" />
             </section>
 
-            <section class="section--type-2">
+            <section id="section--type-2">
                 <img src="./assets/image-2.png" alt="illustration" />
                 <div>
                     <h2>We are a high-level data storage bank</h2>
@@ -56,23 +60,22 @@
                     </p>
                 </div>
             </section>
-            <!--
 
-            <section>
-                <h3>Features</h3>
-                <p>
+            <section id="features-section">
+                <h2 class="section--heading">Features</h2>
+                <p class="section--description">
                     Some of the features and advantages that we provide for
                     those of you who store data in this Data Warehouse.
                 </p>
 
-                <div class="service-cards-container">
-                    <div class="service-card">
+                <div class="feature-cards-container">
+                    <div class="feature-card" id="feature-card-1">
                         <img
                             src="./assets/image-3.png"
-                            class="service-card__image"
+                            class="feature-card__image"
                         />
-                        <h4 class="service-card__heading">search data</h4>
-                        <p class="service-card__description">
+                        <h4 class="feature-card__heading">search data</h4>
+                        <p class="feature-card__description">
                             Don’t worry if your data is very large, the Data
                             Warehoue provides a search engine, which is useful
                             for making it easier to find data effectively saving
@@ -81,17 +84,17 @@
                         <a
                             href="#"
                             data-icon="east"
-                            class="service-card__learn-more"
+                            class="feature-card__learn-more"
                             >Learn more</a
                         >
                     </div>
-                    <div class="service-card">
+                    <div class="feature-card" id="feature-card-2">
                         <img
-                            src="./assets/image-3.png"
-                            class="service-card__image"
+                            src="./assets/image-4.png"
+                            class="feature-card__image"
                         />
-                        <h4 class="service-card__heading">24 hours access</h4>
-                        <p class="service-card__description">
+                        <h4 class="feature-card__heading">24 hours access</h4>
+                        <p class="feature-card__description">
                             Access is given 24 hours a full morning to night and
                             meet again in the morning, giving you comfort when
                             you need data when urgent.
@@ -99,17 +102,17 @@
                         <a
                             href="#"
                             data-icon="east"
-                            class="service-card__learn-more"
+                            class="feature-card__learn-more"
                             >Learn more</a
                         >
                     </div>
-                    <div class="service-card">
+                    <div class="feature-card" id="feature-card-3">
                         <img
-                            src="./assets/image-3.png"
-                            class="service-card__image"
+                            src="./assets/image-5.png"
+                            class="feature-card__image"
                         />
-                        <h4 class="service-card__heading">print out</h4>
-                        <p class="service-card__description">
+                        <h4 class="feature-card__heading">print out</h4>
+                        <p class="feature-card__description">
                             Print out service gives you convenience if someday
                             you need print data, just edit it all and just print
                             it.
@@ -117,17 +120,17 @@
                         <a
                             href="#"
                             data-icon="east"
-                            class="service-card__learn-more"
+                            class="feature-card__learn-more"
                             >Learn more</a
                         >
                     </div>
-                    <div class="service-card">
+                    <div class="feature-card" id="feature-card-4">
                         <img
-                            src="./assets/image-3.png"
-                            class="service-card__image"
+                            src="./assets/image-6.png"
+                            class="feature-card__image"
                         />
-                        <h4 class="service-card__heading">security code</h4>
-                        <p class="service-card__description">
+                        <h4 class="feature-card__heading">security code</h4>
+                        <p class="feature-card__description">
                             Data Security is one of our best facilities. Allows
                             for your files to be safer. The file can be secured
                             with a code or password that you created, so only
@@ -136,14 +139,13 @@
                         <a
                             href="#"
                             data-icon="east"
-                            class="service-card__learn-more"
+                            class="feature-card__learn-more"
                             >Learn more</a
                         >
                     </div>
                 </div>
             </section>
 
-        -->
             <!--
                 TK Create this section
                 <section>
@@ -152,22 +154,95 @@
             -->
         </main>
 
-        <!-- <footer>
-            <div>
-                <h3>Try for free</h3>
-                <span>Get limited 1 week free try our features!</span>
-
-                <button class="button--primary">Learn more</button>
-                <button data-icon="east" class="button--secondary">
-                    Request Demo
-                </button>
-            </div>
-            <div>
-                <div class="brand">
-                    <img src="./assets/logo.svg" class="logo" />
-                    <h4>DataWarehouse</h4>
+        <footer>
+            <div class="footer__part-1">
+                <div>
+                    <h2>Try for free</h2>
+                    <span>Get limited 1 week free try our features!</span>
+                </div>
+                <div id="buttons">
+                    <button class="button--primary">Learn more</button>
+                    <button data-icon="east" class="button--secondary">
+                        Request Demo
+                    </button>
                 </div>
             </div>
-        </footer> -->
+            <div class="footer__part-2">
+                <div class="brand">
+                    <img src="./assets/logo.svg" class="brand__logo" />
+                    <h4 class="brand__name">DataWarehouse</h4>
+                    <p class="brand__address">
+                        Warehouse Society, 234<br />
+                        Bahagia Ave Street PRBW 29281
+                    </p>
+                    <p class="brand__contact">
+                        info@warehouse.project<br />
+                        1-232-3434 (Main)
+                    </p>
+                </div>
+                <div id="links">
+                    <div class="link-column">
+                        <h5 class="link-column__heading">About</h5>
+                        <ul>
+                            <li class="link-column__link">
+                                <a href="#">Profile</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">Features</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">Careers</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">DW News</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h5 class="link-column__heading">Help</h5>
+                        <ul>
+                            <li class="link-column__link">
+                                <a href="#">Support</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">Sign up</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">Guide</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="link-column__link">
+                                <a href="#">Q&A</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="contact-social-media">
+                    <h5>Social Media</h5>
+                    <div id="icons">
+                        <div class="icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__part-3">
+                <span
+                    >© Datawarehouse™, 2020. All rights reserved.<br />
+                    Company Registration Number: 21479524.
+                </span>
+                <span class="icon" id="chat-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </span>
+            </div>
+        </footer>
     </body>
 </html>

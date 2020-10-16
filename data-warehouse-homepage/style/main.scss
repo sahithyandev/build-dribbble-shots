@@ -3,6 +3,11 @@
 
 :root {
     font-family: 16px;
+    --body-horizontal-padding: 9vw;
+}
+html {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -42,6 +47,7 @@ header {
 }
 
 .section {
+    margin: auto;
     margin-bottom: 100px;
     .section--description {
         @extend .nunito-600;
@@ -52,10 +58,13 @@ header {
 }
 
 #hero-section {
+    @extend .section;
     display: flex;
     position: relative;
     flex-direction: column;
-    padding: 72px 0 80px;
+    padding: 9rem 0 6rem;
+
+    // margin-bottom: 180px;
     * {
         width: fit-content;
     }
@@ -79,10 +88,10 @@ header {
     }
 }
 
-.section--type-2 {
+#section--type-2 {
     @extend .section;
     width: 80%;
-    margin: auto;
+    // margin: auto;
     border-radius: 50px;
     background: rgba(240, 99, 184, 0.15);
     display: flex;
@@ -92,11 +101,96 @@ header {
     gap: 20px;
 
     img {
-        width: 45%;
+        width: 120% !important;
     }
 
     .section--description {
         line-height: 160%;
         width: 88%;
+    }
+}
+
+#features-section {
+    @extend .section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section--description {
+        max-width: 42%;
+        text-align: center;
+        margin-bottom: 72px;
+    }
+}
+.feature-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    // width: fit-content;
+    justify-content: center;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 80px var(--body-horizontal-padding);
+    border-top: 2px solid rgba(#9c69e2, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @for $n from 1 to 4 {
+        .footer__part-#{$n} {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .footer__part-1 {
+        align-items: center;
+        margin-bottom: 40px;
+
+        h2 {
+            margin-bottom: 12px;
+        }
+        #buttons {
+            display: inline-flex;
+            gap: 20px;
+            .button--primary {
+                background: #f063b8;
+            }
+        }
+    }
+    .footer__part-2 {
+        #links {
+            display: flex;
+            gap: 40%;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        #contact-social-media {
+            #icons {
+                display: flex;
+                gap: 10px;
+
+                div {
+                    background: rgba(#212353, 0.1);
+                    width: 32px;
+                    height: 32px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .footer__part-3 {
     }
 }

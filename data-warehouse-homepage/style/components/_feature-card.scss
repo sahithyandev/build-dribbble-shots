@@ -1,0 +1,38 @@
+.feature-card {
+    max-width: 500px;
+    min-height: 300px;
+    padding: 20px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "img heading"
+        "img description"
+        ". learn-more";
+    background-repeat: no-repeat;
+    background-position: right;
+    // background-color: red;
+    background-size: 75% 100%;
+
+    .feature-card__image {
+        grid-area: img;
+    }
+    .feature-card__heading {
+        text-transform: capitalize;
+        grid-area: heading;
+        margin-bottom: 0px;
+    }
+    .feature-card__description {
+        grid-area: description;
+    }
+    .feature-card__learn-more {
+        grid-area: learn-more;
+    }
+}
+
+@for $n from 1 to 5 {
+    #feature-card-#{$n} {
+        background-image: url("./../assets/feature-card-#{$n}-bg.svg");
+    }
+}

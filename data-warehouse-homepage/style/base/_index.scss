@@ -16,12 +16,27 @@ button {
     border: 0;
 }
 
+a[data-icon],
+button[data-icon],
 a[data-icon-position="right"],
 button[data-icon-position="right"] {
     display: inline-flex;
     align-items: center;
 
     &::after {
+        @extend .material-icon;
+        font-size: 20px;
+        margin-left: 10px;
+        content: attr(data-icon);
+    }
+}
+
+a[data-icon-position="left"],
+button[data-icon-position="left"] {
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
         @extend .material-icon;
         font-size: 20px;
         margin-left: 10px;
@@ -41,4 +56,7 @@ h1 {
 }
 h2 {
     font-size: 40px;
+}
+h5 {
+    font-size: 1.2rem;
 }
