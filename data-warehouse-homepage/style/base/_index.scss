@@ -8,6 +8,7 @@
 // Overrides
 
 a {
+    @extend .nunito-400;
     text-decoration: none;
     color: black;
 }
@@ -51,12 +52,19 @@ button[data-icon-position="left"] {
     }
 }
 
+p {
+    @extend .nunito-400;
+}
+
 h1 {
     font-size: 80px;
 }
 h2 {
     font-size: 40px;
 }
+h4 {
+    font-size: 1.6rem;
+}
 h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }

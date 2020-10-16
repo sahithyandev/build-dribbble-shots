@@ -2,7 +2,7 @@
   font-family: "Roboto";
 }
 
-.nunito, .nunito-400, .nunito-600, header nav, .section .section--description, #hero-section .section--description, #section--type-2 .section--description, #features-section .section--description, .nunito-700 {
+.nunito, .nunito-400, a, p, .nunito-600, header nav, .section .section--description, #hero-section .section--description, #section--type-2 .section--description, #features-section .section--description, .brand .brand__address, .nunito-700, .nunito-800, .brand .brand__contact {
   font-family: "Nunito";
 }
 
@@ -18,16 +18,20 @@
   font-weight: 700;
 }
 
-.nunito-400 {
+.nunito-400, a, p {
   font-weight: 400;
 }
 
-.nunito-600, header nav, .section .section--description, #hero-section .section--description, #section--type-2 .section--description, #features-section .section--description {
+.nunito-600, header nav, .section .section--description, #hero-section .section--description, #section--type-2 .section--description, #features-section .section--description, .brand .brand__address {
   font-weight: 600;
 }
 
 .nunito-700 {
   font-weight: 700;
+}
+
+.nunito-800, .brand .brand__contact {
+  font-weight: 800;
 }
 
 .material-icon, a[data-icon]::after,
@@ -115,14 +119,20 @@ h2 {
   font-size: 40px;
 }
 
+h4 {
+  font-size: 1.6rem;
+}
+
 h5 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .button, .button--primary, .button--secondary {
   border-radius: 500px;
   font-size: 1rem;
   padding: 10px 20px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .button--primary {
@@ -153,9 +163,8 @@ h5 {
   max-width: 500px;
   min-height: 300px;
   padding: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -165,6 +174,8 @@ h5 {
       grid-template-areas: "img heading" "img description" ". learn-more";
   background-repeat: no-repeat;
   background-position: right;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   background-size: 75% 100%;
 }
 
@@ -368,6 +379,49 @@ header nav li.selected {
           justify-content: center;
 }
 
+.brand {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto 20px auto auto;
+      grid-template-rows: auto 20px auto auto;
+      grid-template-areas: "logo brand-name" ". ." "address address" "contact contact";
+  -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.brand .brand__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+.brand .brand__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: brand-name;
+  margin: 0;
+}
+
+.brand .brand__address {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: address;
+  color: #212353;
+}
+
+.brand .brand__contact {
+  color: #212353;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: contact;
+}
+
 footer {
   position: absolute;
   left: 0;
@@ -422,6 +476,10 @@ footer .footer__part-1 h2 {
   margin-bottom: 12px;
 }
 
+footer .footer__part-1 .try-for-free-description {
+  color: #4b5d68;
+}
+
 footer .footer__part-1 #buttons {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -433,6 +491,10 @@ footer .footer__part-1 #buttons .button--primary {
   background: #f063b8;
 }
 
+footer .footer__part-1 #buttons .button--primary:hover {
+  background: #c05194;
+}
+
 footer .footer__part-2 #links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,7 +502,7 @@ footer .footer__part-2 #links {
   gap: 40%;
 }
 
-footer .footer__part-2 #links ul {
+footer .footer__part-2 ul {
   list-style: none;
   padding: 0;
   display: -webkit-box;
@@ -450,6 +512,19 @@ footer .footer__part-2 #links ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 8px;
+}
+
+footer .footer__part-2 ul li a {
+  color: #0e0f2e;
+  font-weight: 500 !important;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+
+footer .footer__part-2 ul li a:hover {
+  border-bottom: 3px dashed #487ae6;
+  color: #487ae6;
 }
 
 footer .footer__part-2 #contact-social-media #icons {
@@ -457,12 +532,14 @@ footer .footer__part-2 #contact-social-media #icons {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
-footer .footer__part-2 #contact-social-media #icons div {
-  background: rgba(33, 35, 83, 0.1);
+footer .footer__part-2 #contact-social-media #icons a.icon {
+  display: block;
   width: 32px;
   height: 32px;
+  background: rgba(33, 35, 83, 0.1);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -473,4 +550,44 @@ footer .footer__part-2 #contact-social-media #icons div {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+footer .footer__part-2 #contact-social-media #icons a.icon i.fab {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+footer .footer__part-2 #contact-social-media #icons a.icon:hover {
+  background: #f063b8;
+}
+
+footer .footer__part-2 #contact-social-media #icons a.icon:hover i.fab {
+  color: white;
+}
+
+footer .footer__part-3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer__part-3 #copyrights {
+  color: #212353;
+}
+
+footer .footer__part-3 #chat-icon {
+  cursor: pointer;
+  background: rgba(156, 105, 226, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .footer__part-3 #chat-icon i.fas {
+  font-size: 22px;
+  color: #9c69e2;
 }

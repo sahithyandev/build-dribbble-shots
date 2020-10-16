@@ -12,7 +12,6 @@ html {
 
 body {
     @extend .roboto;
-
     background-image: linear-gradient(180deg, #f6fafd 0%, #ffffff 19.4%);
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -130,6 +129,36 @@ header {
     justify-content: center;
 }
 
+.brand {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 20px auto auto;
+    grid-template-areas:
+        "logo brand-name"
+        ". ."
+        "address address"
+        "contact contact";
+    align-self: center;
+    column-gap: 20px;
+    .brand__logo {
+        grid-area: logo;
+    }
+    .brand__name {
+        grid-area: brand-name;
+        margin: 0;
+    }
+    .brand__address {
+        @extend .nunito-600;
+        grid-area: address;
+        color: #212353;
+    }
+    .brand__contact {
+        @extend .nunito-800;
+        color: #212353;
+        grid-area: contact;
+    }
+}
+
 footer {
     position: absolute;
     left: 0;
@@ -154,11 +183,18 @@ footer {
         h2 {
             margin-bottom: 12px;
         }
+        .try-for-free-description {
+            color: #4b5d68;
+        }
         #buttons {
             display: inline-flex;
             gap: 20px;
             .button--primary {
                 background: #f063b8;
+
+                &:hover {
+                    background: #c05194;
+                }
             }
         }
     }
@@ -166,31 +202,72 @@ footer {
         #links {
             display: flex;
             gap: 40%;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
 
-            ul {
-                list-style: none;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
+            li a {
+                color: #0e0f2e;
+                font-weight: 500 !important;
+                transition: color 0.25s ease;
+
+                &:hover {
+                    border-bottom: 3px dashed #487ae6;
+                    color: #487ae6;
+                }
             }
         }
         #contact-social-media {
             #icons {
                 display: flex;
                 gap: 10px;
+                cursor: pointer;
 
-                div {
-                    background: rgba(#212353, 0.1);
+                a.icon {
+                    display: block;
                     width: 32px;
                     height: 32px;
+                    background: rgba(#212353, 0.1);
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
                     border-radius: 50%;
+                    transition: background 0.3s ease;
+                    i.fab {
+                        transition: color 0.3s ease;
+                    }
+
+                    &:hover {
+                        background: rgba(#f063b8, 1);
+
+                        i.fab {
+                            color: white;
+                        }
+                    }
                 }
             }
         }
     }
     .footer__part-3 {
+        align-items: center;
+        #copyrights {
+            color: #212353;
+        }
+
+        #chat-icon {
+            cursor: pointer;
+            background: rgba(#9c69e2, 0.2);
+            padding: 10px;
+            border-radius: 50%;
+            height: fit-content;
+            i.fas {
+                font-size: 22px;
+                color: #9c69e2;
+            }
+        }
     }
 }

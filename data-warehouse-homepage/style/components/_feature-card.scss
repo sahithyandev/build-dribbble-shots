@@ -2,7 +2,8 @@
     max-width: 500px;
     min-height: 300px;
     padding: 20px;
-    align-items: center;
+    // align-items: center;
+    align-content: center;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(3, auto);
@@ -12,7 +13,7 @@
         ". learn-more";
     background-repeat: no-repeat;
     background-position: right;
-    // background-color: red;
+    column-gap: 20px;
     background-size: 75% 100%;
 
     .feature-card__image {
