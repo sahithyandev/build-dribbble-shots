@@ -48,6 +48,6 @@ const FILENAME = __filename.slice(__dirname.length + 1);
 
 content = content
     .replace("<challenges_table>", challengeTable)
-    .replace("<info_about_creation>", `This page is created using [${README_FILE_TEMPLATE}](./${README_FILE_TEMPLATE}) by the [${FILENAME}](./${FILENAME})`);
+    .replace("<info_about_creation>", `This README was created using [${README_FILE_TEMPLATE}](./${README_FILE_TEMPLATE}) by [${FILENAME}](./${FILENAME})`);
 
 fs.writeFileSync(OUTPUT_FILE, content);

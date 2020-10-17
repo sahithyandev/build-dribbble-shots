@@ -15,4 +15,4 @@ Status "**Paused**" means the challenge is not finished and stopped in the middl
 | [Color Picker](./color-picker/) ([Demo](http://build-dribbble-shots.vercel.app/./color-picker/)) | [Phil Goodwin for FiveBox](https://dribbble.com/shots/11146660-Color-Picker-FREEBIE) | Paused |
 | [Data Warehouse homepage](./data-warehouse-homepage) ([Demo](http://build-dribbble-shots.vercel.app/./data-warehouse-homepage)) | [Aryo Pamungkas for SLAB Design Studio](https://dribbble.com/shots/10058339-FIGMA-FREEBIES-Data-warehouse-homepage) | In Progress |
 
-This page is created using [./README_TEMPLATE.md](././README_TEMPLATE.md) by the [build-readme.js](./build-readme.js)
+This README was created using [./README_TEMPLATE.md](././README_TEMPLATE.md) by [build-readme.js](./build-readme.js)
