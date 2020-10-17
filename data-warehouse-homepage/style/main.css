@@ -416,10 +416,15 @@ h5 {
   background: #9c69e2;
   border-radius: 50px;
   padding: 40px;
+  padding-right: 0;
 }
 
 #testimonial-section h2 {
   color: white;
+}
+
+#testimonial-section #testimonial-scroll {
+  margin: 20px 0;
 }
 
 #testimonial-section #testimonial-scroll #testimonials-container {
@@ -474,6 +479,28 @@ h5 {
 #testimonial-section #controls #testimonial-scroll__bubbles .bubble.selected {
   font-size: 10px;
   color: #f063b8;
+}
+
+#testimonial-section #controls #testimonial-scroll__move-control {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+#testimonial-section #controls #testimonial-scroll__move-control i.fas {
+  cursor: pointer;
+  color: white;
+  font-size: 28px;
+  line-height: 10px;
+}
+
+#testimonial-section #controls #testimonial-scroll__move-control i.fas.disabled {
+  opacity: 0.4;
 }
 
 :root {

@@ -4,11 +4,13 @@
     background: #9c69e2;
     border-radius: 50px;
     padding: 40px;
+    padding-right: 0;
 
     h2 {
         color: white;
     }
     #testimonial-scroll {
+        margin: 20px 0;
         #testimonials-container {
             display: flex;
             gap: 20px;
@@ -44,6 +46,23 @@
                 &.selected {
                     font-size: 10px;
                     color: #f063b8;
+                }
+            }
+        }
+
+        #testimonial-scroll__move-control {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 40px;
+            i.fas {
+                cursor: pointer;
+                color: white;
+                font-size: 28px;
+                line-height: 10px;
+
+                &.disabled {
+                    opacity: 0.4;
                 }
             }
         }

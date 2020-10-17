@@ -1,4 +1,5 @@
 const $ = str => document.querySelector(str);
+const $_ = str => document.querySelectorAll(str);
 const testimonials = [{
     testimonialId: "testimonial-1",
     userImage: "user-1.png",
@@ -20,17 +21,28 @@ const testimonials = [{
     content: "Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla."
 }]
 
-function scrollToTestimonial(id) {
+function selectTestimonial(id, scroll = true) {
     let oldBubble = $('i.bubble.selected');
     if (oldBubble) {
         oldBubble.classList.remove('selected');
     }
-    document.getElementById(id).scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-    });
+    if (scroll == true) {
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
     let bubble = $(`i.bubble[data-for=${id}]`);
     bubble.classList.add('selected');
+    $('#left-button').classList.remove('disabled');
+    $('#right-button').classList.remove('disabled');
+    let n = +(id.split('-')[1])
+    if (n == 1) {
+        $('#right-button').classList.add('disabled');
+    }
+    if (n == testimonials.length) {
+        $('#left-button').classList.add('disabled');
+    }
 }
 
 function createTestimonialCardContent(testimonial) {
@@ -51,7 +63,17 @@ function createTestimonialCardContent(testimonial) {
 
 function bubblePressed(event) {
     let testimonialToSelect = event.target.getAttribute('data-for');
-    scrollToTestimonial(testimonialToSelect);
+    selectTestimonial(testimonialToSelect);
+}
+function controlButtonClicked(event) {
+    if (event.target.classList.contains('disabled')) return;
+    let selectedBubble = $(".bubble.selected");
+    let direction = event.target.id == 'left-button' ? 1 : -1; // add this to the id;
+    let selectedTestimonial;
+    if (selectedBubble) {
+        selectedTestimonial = selectedBubble.getAttribute('data-for');
+    }
+    selectTestimonial(`testimonial-${+(selectedTestimonial.split('-')[1]) + direction}`);
 }
 
 function addTestimonials() {
@@ -83,5 +105,8 @@ function addTestimonials() {
 
 document.body.onload = () => {
     addTestimonials();
-    // scrollToTestimonial('testimonial-1');
+    $_('#testimonial-scroll__move-control i.fas').forEach(controlButton => {
+        controlButton.onclick = controlButtonClicked;
+    })
+    selectTestimonial('testimonial-1', false);
 }
