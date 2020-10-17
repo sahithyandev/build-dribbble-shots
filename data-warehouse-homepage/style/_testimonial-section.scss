@@ -17,6 +17,7 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             margin-bottom: 20px;
+            scroll-padding: 0 50px;
 
             & {
                 -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -24,6 +25,20 @@
             }
             &::-webkit-scrollbar {
                 display: none; /* Safari and Chrome */
+            }
+
+            .testimonial-card:last-child {
+                position: relative;
+                &::after {
+                    right: -50px;
+                    content: "";
+                    width: 50px;
+                    height: 100%;
+                    display: block;
+                    // background-color: red;
+                    position: absolute;
+                    // margin-right: 40px !important;
+                }
             }
         }
     }

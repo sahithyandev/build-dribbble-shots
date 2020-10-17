@@ -435,6 +435,7 @@ h5 {
   overflow-x: auto;
   scroll-behavior: smooth;
   margin-bottom: 20px;
+  scroll-padding: 0 50px;
 }
 
 #testimonial-section #testimonial-scroll #testimonials-container {
@@ -447,6 +448,19 @@ h5 {
 #testimonial-section #testimonial-scroll #testimonials-container::-webkit-scrollbar {
   display: none;
   /* Safari and Chrome */
+}
+
+#testimonial-section #testimonial-scroll #testimonials-container .testimonial-card:last-child {
+  position: relative;
+}
+
+#testimonial-section #testimonial-scroll #testimonials-container .testimonial-card:last-child::after {
+  right: -50px;
+  content: "";
+  width: 50px;
+  height: 100%;
+  display: block;
+  position: absolute;
 }
 
 #testimonial-section #controls {

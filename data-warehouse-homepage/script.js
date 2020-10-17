@@ -31,6 +31,8 @@ function selectTestimonial(id, scroll = true) {
             behavior: 'smooth',
             block: 'center'
         });
+    } else {
+        document.getElementById(id).parentElement.scroll(-100, 0);
     }
     let bubble = $(`i.bubble[data-for=${id}]`);
     bubble.classList.add('selected');
@@ -104,6 +106,9 @@ function addTestimonials() {
 
 
 document.body.onload = () => {
+    if (window.innerWidth <= 700) {
+        alert("This website is not optimized yet for devices with small screens (like you are using now)");
+    }
     addTestimonials();
     $_('#testimonial-scroll__move-control i.fas').forEach(controlButton => {
         controlButton.onclick = controlButtonClicked;
