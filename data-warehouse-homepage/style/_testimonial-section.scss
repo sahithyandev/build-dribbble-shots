@@ -1,0 +1,51 @@
+@import "./base/index";
+
+#testimonial-section {
+    background: #9c69e2;
+    border-radius: 50px;
+    padding: 40px;
+
+    h2 {
+        color: white;
+    }
+    #testimonial-scroll {
+        #testimonials-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            margin-bottom: 20px;
+
+            & {
+                -ms-overflow-style: none; /* Internet Explorer 10+ */
+                scrollbar-width: none; /* Firefox */
+            }
+            &::-webkit-scrollbar {
+                display: none; /* Safari and Chrome */
+            }
+        }
+    }
+
+    #controls {
+        display: flex;
+        justify-content: space-between;
+
+        #testimonial-scroll__bubbles {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+
+            .bubble {
+                font-size: 8px;
+                color: white;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &.selected {
+                    font-size: 10px;
+                    color: #f063b8;
+                }
+            }
+        }
+    }
+}

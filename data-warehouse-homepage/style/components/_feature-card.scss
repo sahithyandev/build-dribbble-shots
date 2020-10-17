@@ -5,7 +5,7 @@
     // align-items: center;
     align-content: center;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
         "img heading"
@@ -15,9 +15,11 @@
     background-position: right;
     column-gap: 20px;
     background-size: 75% 100%;
+    padding: 12px;
 
     .feature-card__image {
         grid-area: img;
+        transform: scale(0.9);
     }
     .feature-card__heading {
         text-transform: capitalize;
@@ -26,9 +28,16 @@
     }
     .feature-card__description {
         grid-area: description;
+        color: #4b5d68;
+        margin-right: 10px;
     }
     .feature-card__learn-more {
         grid-area: learn-more;
+        color: #212353;
+
+        &::after {
+            color: #9c69e2;
+        }
     }
 }
 

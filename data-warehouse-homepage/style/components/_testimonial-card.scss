@@ -1,0 +1,43 @@
+.testimonial-card {
+    background-color: white;
+    // color: black;
+    display: flex;
+    max-width: 640px;
+    min-width: 420px;
+    gap: 16px;
+    padding: 2% 3%;
+    // min-width: 400px;
+    height: fit-content;
+    // min-height: 320px;
+    border-radius: 20px;
+
+    .testimonial-card__user-image {
+        width: 150px;
+
+        height: fit-content;
+        // height: 72px;
+    }
+    .break {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .testimonial-card__user-name {
+        @extend .nunito-700;
+        font-size: 1em;
+        line-height: 29px;
+    }
+    .testimonial-card__user-details {
+        @extend .nunito-600;
+        font-size: 0.9em;
+        letter-spacing: 0.01em;
+        color: #9c69e2 !important;
+    }
+    .testimonial-card__content {
+        @extend .nunito-600;
+        color: #4b5d68;
+        font-size: 1em;
+        line-height: 32px;
+        margin-top: 10px;
+    }
+}
