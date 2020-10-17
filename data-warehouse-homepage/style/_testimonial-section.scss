@@ -6,6 +6,10 @@
     padding: 40px;
     padding-right: 0;
 
+    @include mobile {
+        display: none;
+    }
+
     h2 {
         color: white;
     }

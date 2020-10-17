@@ -17,8 +17,15 @@
     background-size: 75% 100%;
     padding: 12px;
 
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
     .feature-card__image {
         grid-area: img;
+        height: auto;
+        width: 100%;
         transform: scale(0.9);
     }
     .feature-card__heading {

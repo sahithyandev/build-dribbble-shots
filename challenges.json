@@ -15,7 +15,7 @@
     },
     {
         "challenge-name": "Data Warehouse homepage",
-        "challenge-directory": "./data-warehouse-homepage",
+        "challenge-directory": "./data-warehouse-homepage/",
         "designed-by": "Aryo Pamungkas for SLAB Design Studio",
         "dribbble-link": "https://dribbble.com/shots/10058339-FIGMA-FREEBIES-Data-warehouse-homepage",
         "status": "completed"

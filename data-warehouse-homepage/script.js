@@ -107,7 +107,7 @@ function addTestimonials() {
 
 document.body.onload = () => {
     if (window.innerWidth <= 700) {
-        alert("This website is not optimized yet for devices with small screens (like you are using now)");
+        // alert("This website is not fully optimized for devices with small screens (like you are using now). Some elements of the website may not be visible");
     }
     addTestimonials();
     $_('#testimonial-scroll__move-control i.fas').forEach(controlButton => {
