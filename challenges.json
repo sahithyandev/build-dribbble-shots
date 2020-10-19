@@ -19,5 +19,12 @@
         "designed-by": "Aryo Pamungkas for SLAB Design Studio",
         "dribbble-link": "https://dribbble.com/shots/10058339-FIGMA-FREEBIES-Data-warehouse-homepage",
         "status": "completed"
+    },
+    {
+        "challenge-name": "Tour and travel website",
+        "challenge-directory": "./tour-and-travel-website/",
+        "designed-by": "Aryo Pamungkas for SLAB Design Studio",
+        "dribbble-link": "https://dribbble.com/shots/13625987-FIGMA-FREEBIE-Tour-and-travel-website",
+        "status": "in-progress"
     }
 ]
