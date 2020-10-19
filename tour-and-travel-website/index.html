@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tour & Travel</title>
+        <title>Thousand Sunny</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
             rel="stylesheet"
@@ -15,11 +15,12 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./style/main.css" />
+        <link rel="shortcut icon" href="./assets/logo.svg" type="image/svg" />
     </head>
     <body>
         <div id="container">
             <header>
-                <img src="" alt="" class="logo" />
+                <img src="./assets/logo.svg" alt="logo" class="logo" />
                 <nav>
                     <a href="#" class="nav--link selected">Home</a>
                     <a href="#" class="nav--link">Destinations</a>
@@ -32,9 +33,107 @@
                 </div>
             </header>
 
-            <main></main>
+            <main>
+                <section id="section-1">
+                    <h1>Explore and Travel</h1>
+                    <h4>Holiday Finder</h4>
+                    <div>
+                        <input type="text" placeholder="Location" />
+                        <input type="text" placeholder="Activity" />
+                        <input type="text" placeholder="Grade" />
+                        <input type="date" placeholder="Date" />
+                    </div>
+                    <button class="btn-primary">Explore</button>
+                    <img src="./assets/section-1.png" alt="" />
+                </section>
+                <section id="section-2">
+                    <img src="./assets/section-2.png" alt="" />
+                    <h2>A new way to explore the world</h2>
+                    <p>
+                        For decades travellers have reached for Lonely Planet
+                        books when looking to plan and execute their perfect
+                        trip, but now, they can also let Lonely Planet
+                        Experiences lead the way
+                    </p>
+                    <button class="btn-primary">Learn more</button>
+                </section>
+                <section id="section-3">
+                    <div>
+                        <h2>Featured destinations</h2>
+                        <a href="#">
+                            View all
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!-- <div>
+                        <div>
+                            <img src="./assets/Mask Group-1.png" alt="" />
+                            <div>
+                                <span class="location-name">Raja Ampat</span>
+                                <span class="location-country">Indonesia</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </section>
+                <section id="section-4">
+                    <h2>Guides by Thousand Sunny</h2>
+                    <p>
+                        Packed with tips and advice from our on-the-ground
+                        experts, our city guides app (iOS and Android) is the
+                        ultimate resource before and during a trip.
+                    </p>
+                    <button class="btn-primary">Download</button>
+                    <img src="./assets/section-4.png" alt="" />
+                </section>
+                <section id="section-5">
+                    <h2>Testimonials</h2>
+                    <div class="testimonial-container">
+                        <div id="testimonial--rating"></div>
+                        <p id="testimonial--content">
+                            Quisque in lacus a urna fermentum euismod. Integer
+                            mi nibh, dapibus ac scelerisque eu, facilisis quis
+                            purus. Morbi blandit sit amet turpis nec
+                        </p>
+                        <div id="testimonial--author">
+                            <span id="testimonial--author-name">
+                                Edward Newgate
+                            </span>
+                            <span id="testimonial--author-info">
+                                Founder Circle
+                            </span>
+                        </div>
+
+                        <div>
+                            <img
+                                src="./assets/photo.png"
+                                class="testimonial--author-info"
+                            />
+                            <div id="controls"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-6">
+                    <div>
+                        <h2>Trending stories</h2>
+                        <a href="#">
+                            View all
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div></div>
+                </section>
+            </main>
         </div>
 
-        <footer></footer>
+        <!-- <footer>
+            <div id="inner"></div>
+            <div id="contact-social-media">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </footer> -->
     </body>
 </html>
