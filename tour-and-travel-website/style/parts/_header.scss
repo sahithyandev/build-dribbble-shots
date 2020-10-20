@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+
+    nav {
+        margin-left: auto;
+        display: flex;
+        gap: 20px;
+
+        a.nav--link {
+            @extend .inter-400;
+            color: #b8b3cd;
+            font-size: 1em;
+
+            &.selected {
+                @extend .inter-500;
+                color: #202336;
+            }
+        }
+    }
+
+    .buttons-container {
+        display: flex;
+        gap: 18px;
+    }
+}

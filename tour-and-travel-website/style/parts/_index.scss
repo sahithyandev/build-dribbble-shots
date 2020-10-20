@@ -1,0 +1,6 @@
+// Instead of having all the basic SCSS code in the main.scss,
+// I created this directory to store the parts of the code and
+// import them into main.scss.
+
+@import "./header";
+@import "./footer";

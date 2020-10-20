@@ -1,5 +1,6 @@
 @import "./base/index";
 @import "./components/index";
+@import "./parts/index";
 
 :root {
     font-size: 18px;
@@ -18,31 +19,62 @@ body {
     margin: auto;
 }
 
-header {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
+.section {
+    margin: 80px 0;
 
-    nav {
-        margin-left: auto;
-        display: flex;
-        gap: 20px;
-
-        a.nav--link {
-            @extend .inter-400;
-            color: #b8b3cd;
-            font-size: 1em;
-
-            &.selected {
-                @extend .inter-500;
-                color: #202336;
-            }
-        }
+    .section--heading {
+        @extend .playfair-display-700;
     }
 
-    .buttons-container {
-        display: flex;
-        gap: 18px;
+    .section--description {
+        @extend .mulish-300;
+        font-size: 0.98em;
+        line-height: 30px;
+        letter-spacing: 0em;
+        color: #7d7987;
+    }
+}
+
+#section-2 {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: column;
+    column-gap: 40px;
+
+    .section--heading {
+        align-self: flex-end;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        grid-row: 1 / 4;
+        // grid-row: 1 span 3;
+    }
+    .section--description {
+        width: 80%;
+    }
+    .btn-primary {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+#section-4 {
+    display: flex;
+    align-items: center;
+    // display: grid;
+    // grid-template-columns: auto 40%;
+    // grid-template-rows: auto auto auto;
+    // grid-auto-flow: column;
+
+    img {
+        grid-row: 1 / 4;
+        height: auto;
+        width: 40%;
+    }
+    .section--description {
+        width: 72%;
     }
 }

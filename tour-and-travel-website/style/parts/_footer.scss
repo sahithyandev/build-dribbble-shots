@@ -1,0 +1,61 @@
+footer {
+    background-color: #f9f9fb;
+    margin: 0;
+    margin-top: 200px;
+    padding-top: 60px;
+
+    #inner {
+        width: 80vw;
+        margin: auto;
+        display: flex;
+        gap: 60px;
+
+        #brand {
+            flex: 2;
+            p {
+                @extend .mulish-300;
+                color: #848484;
+                font-size: 1em;
+                line-height: 28px;
+                letter-spacing: 0em;
+            }
+        }
+
+        .links-section {
+            flex: 1;
+            h4 {
+                @extend .mulish-700;
+            }
+            .links-container {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+
+                @extend .mulish-300;
+                font-size: 1em;
+                line-height: 38px;
+                letter-spacing: 0em;
+                color: #848484;
+            }
+        }
+    }
+
+    hr {
+        width: 80%;
+        margin: 80px auto 20px auto;
+    }
+
+    #contact-social-media {
+        // background-color: rgb(255, 232, 232);
+        margin: 10px auto 32px;
+        width: fit-content;
+        height: 24px;
+
+        display: flex;
+        gap: 2em;
+
+        i.fab {
+            font-size: 24px;
+        }
+    }
+}
