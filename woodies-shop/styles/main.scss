@@ -10,9 +10,12 @@ body {
     @extend .nunito;
     margin: 0;
     padding: 0;
+
+    --container-width: 86vw;
+    --body-padding: calc((100vw - var(--container-width)) / 2);
 }
 
 #container {
-    width: 86vw;
+    width: var(--container-width);
     margin: 20px auto;
 }

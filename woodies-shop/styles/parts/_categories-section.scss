@@ -6,7 +6,7 @@
 
         .card {
             @extend .flex--column;
-            background-color: #f9bdbd;
+
             border-radius: 0 100px;
             width: fit-content;
             min-width: 280px;
@@ -34,6 +34,24 @@
                 background: transparent;
                 padding: 6px 12px;
             }
+        }
+
+        .card:first-child {
+            .card--preview {
+                width: 86%;
+                position: relative;
+                left: -36px;
+            }
+        }
+
+        .card:nth-child(3n + 1) {
+            background-color: #f9bdbd;
+        }
+        .card:nth-child(3n + 2) {
+            background-color: #f7dea6;
+        }
+        .card:nth-child(3n) {
+            background-color: #a8dcec;
         }
     }
 }

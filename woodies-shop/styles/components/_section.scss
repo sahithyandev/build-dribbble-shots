@@ -33,14 +33,14 @@
             color: rgba(34, 34, 34, 0.1);
         }
     }
+}
 
-    button.call-to-action {
-        @extend .nunito-700;
-        width: fit-content;
-        color: white;
-        background: #daa520;
-        border: none;
-        padding: 14px 24px;
-        border-radius: 4px;
-    }
+.call-to-action {
+    @extend .nunito-700;
+    width: fit-content;
+    color: white;
+    background: #daa520;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 4px;
 }

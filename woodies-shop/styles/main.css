@@ -1,8 +1,8 @@
-.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, .nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button, .nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .section button.call-to-action, .nunito-800, header nav .nav--link.active, #categories-section .content .card .card--title, .section .section--heading .section--heading__secondary, body {
+.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, footer .subscribe-section .input-container input, .nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button, .nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .call-to-action, .nunito-800, header nav .nav--link.active, #categories-section .content .card .card--title, .section .section--heading .section--heading__secondary, body {
   font-family: "Nunito";
 }
 
-.nunito-400, header nav .nav--link, #hero-section .sub-heading {
+.nunito-400, header nav .nav--link, #hero-section .sub-heading, footer .subscribe-section .input-container input {
   font-weight: 400;
 }
 
@@ -10,7 +10,7 @@
   font-weight: 600;
 }
 
-.nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .section button.call-to-action {
+.nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .call-to-action {
   font-weight: 700;
 }
 
@@ -22,7 +22,7 @@
   text-transform: uppercase;
 }
 
-.flex, .flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card, header, header nav, #about-us-section .image-section, #how-to-section .content, #categories-section .content, .section .section--heading {
+.flex, .flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card, header, header nav, #about-us-section .image-section, #how-to-section .content, #categories-section .content, footer .subscribe-section .input-container, .section .section--heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,7 +181,6 @@ header button {
 }
 
 #categories-section .content .card {
-  background-color: #f9bdbd;
   border-radius: 0 100px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -211,6 +210,148 @@ header button {
   border: 1px solid black;
   background: transparent;
   padding: 6px 12px;
+}
+
+#categories-section .content .card:first-child .card--preview {
+  width: 86%;
+  position: relative;
+  left: -36px;
+}
+
+#categories-section .content .card:nth-child(3n + 1) {
+  background-color: #f9bdbd;
+}
+
+#categories-section .content .card:nth-child(3n + 2) {
+  background-color: #f7dea6;
+}
+
+#categories-section .content .card:nth-child(3n) {
+  background-color: #a8dcec;
+}
+
+footer {
+  padding: 40px var(--body-padding) 0;
+  background-color: #e5e5e5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  margin-top: 150px;
+}
+
+footer .subscribe-section {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "heading input" "message input";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+footer .subscribe-section h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: heading;
+  margin: 0;
+}
+
+footer .subscribe-section p {
+  margin: 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: message;
+}
+
+footer .subscribe-section .input-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: input;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .subscribe-section .input-container input {
+  display: block;
+  border: 1px solid #daa520;
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-left: 12px;
+}
+
+footer .subscribe-section .input-container button {
+  padding: 8px 24px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+footer .something {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  border-top: 1px solid #c4c4c4;
+  padding-top: 20px;
+  gap: 10px;
+  width: 136%;
+}
+
+footer .something .column--title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+footer .something .link {
+  display: block;
+  color: #8d8d8d;
+}
+
+footer .something .brand-rights {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #8d8d8d;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer img {
+  justify-self: flex-end;
+  width: 58%;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
 }
 
 .section {
@@ -253,7 +394,7 @@ header button {
   color: rgba(34, 34, 34, 0.1);
 }
 
-.section button.call-to-action {
+.call-to-action {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -271,9 +412,11 @@ header button {
 body {
   margin: 0;
   padding: 0;
+  --container-width: 86vw;
+  --body-padding: calc((100vw - var(--container-width)) / 2);
 }
 
 #container {
-  width: 86vw;
+  width: var(--container-width);
   margin: 20px auto;
 }
