@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+        margin-left: auto;
+        margin-right: 40px;
+        display: flex;
+        gap: 20px;
+        .nav--link {
+            @extend .nunito-400;
+            font-size: 1em;
+            line-height: 22px;
+            // letter-spacing: 0em;
+            color: rgba(34, 34, 34, 0.75);
+
+            &.active {
+                @extend .nunito-800;
+                color: #daa520;
+            }
+        }
+    }
+
+    button {
+        background: transparent;
+        border-radius: 8px;
+        border: 1px solid #3e3f43;
+        padding: 7px 20px;
+    }
+}

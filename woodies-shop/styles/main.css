@@ -1,1 +1,131 @@
-/* No CSS */
+.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, .nunito-600, .nunito-700, .bold, #hero-section .heading, #hero-section button, .nunito-800, header nav .nav--link.active, body {
+  font-family: "Nunito";
+}
+
+.nunito-400, header nav .nav--link, #hero-section .sub-heading {
+  font-weight: 400;
+}
+
+.nunito-600 {
+  font-weight: 600;
+}
+
+.nunito-700, .bold, #hero-section .heading, #hero-section button {
+  font-weight: 700;
+}
+
+.nunito-800, header nav .nav--link.active {
+  font-weight: 800;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav {
+  margin-left: auto;
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+header nav .nav--link {
+  font-size: 1em;
+  line-height: 22px;
+  color: rgba(34, 34, 34, 0.75);
+}
+
+header nav .nav--link.active {
+  color: #daa520;
+}
+
+header button {
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid #3e3f43;
+  padding: 7px 20px;
+}
+
+#hero-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+}
+
+#hero-section .heading,
+#hero-section .sub-heading {
+  margin: 0;
+}
+
+#hero-section .sub-heading {
+  margin-top: 80px;
+  font-size: 2em;
+  max-width: 460px;
+}
+
+#hero-section .heading {
+  font-size: 4em;
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+
+#hero-section button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: #daa520;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 4px;
+}
+
+#hero-section img {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+  width: 80%;
+  justify-self: flex-end;
+}
+
+:root {
+  font-family: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 86vw;
+  margin: 20px auto;
+}
