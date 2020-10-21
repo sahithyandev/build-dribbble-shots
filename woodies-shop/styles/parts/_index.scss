@@ -1,8 +1,8 @@
 // To make it easy for maintainance,
 // I decided to code SCSS in different files for each section
 
-// Code for each sections will initially be written in main.scss.
-// And when I finish writing the code, I will move it here.
-
 @import "./header";
 @import "./hero-section";
+@import "./about-us-section";
+@import "./how-to-section";
+@import "./categories-section";

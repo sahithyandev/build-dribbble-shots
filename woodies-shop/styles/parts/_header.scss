@@ -1,12 +1,12 @@
 header {
-    display: flex;
+    @extend .flex;
     align-items: center;
     justify-content: space-between;
 
     nav {
         margin-left: auto;
         margin-right: 40px;
-        display: flex;
+        @extend .flex;
         gap: 20px;
         .nav--link {
             @extend .nunito-400;

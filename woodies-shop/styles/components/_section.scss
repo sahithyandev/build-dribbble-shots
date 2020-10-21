@@ -1,0 +1,46 @@
+// Common styles for sections
+// but not for all sections
+
+.section {
+    margin: 40px 0;
+
+    .section--heading {
+        @extend .flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 20px;
+        // justify-content: space-between;
+
+        .section--heading__primary {
+            @extend .nunito-700;
+            display: inline-flex;
+            align-items: center;
+            font-size: 2em;
+
+            &::before {
+                content: url("./../assets/logo-icon.svg");
+                vertical-align: center;
+                margin-right: 4px;
+            }
+        }
+        .divider {
+            flex: 1;
+            border: 1px solid #000000;
+        }
+        .section--heading__secondary {
+            @extend .uppercase, .nunito-800;
+            font-size: 4em;
+            color: rgba(34, 34, 34, 0.1);
+        }
+    }
+
+    button.call-to-action {
+        @extend .nunito-700;
+        width: fit-content;
+        color: white;
+        background: #daa520;
+        border: none;
+        padding: 14px 24px;
+        border-radius: 4px;
+    }
+}

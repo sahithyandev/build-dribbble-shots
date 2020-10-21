@@ -21,15 +21,7 @@
         max-width: 460px;
         margin-bottom: 40px;
     }
-    button {
-        @extend .nunito-700;
-        width: fit-content;
-        color: white;
-        background: #daa520;
-        border: none;
-        padding: 14px 24px;
-        border-radius: 4px;
-    }
+
     img {
         grid-column: 2;
         grid-row: 1 / 5;

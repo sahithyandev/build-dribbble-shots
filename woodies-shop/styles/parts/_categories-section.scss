@@ -1,0 +1,39 @@
+#categories-section {
+    .content {
+        @extend .flex;
+        gap: 40px;
+        flex-wrap: wrap;
+
+        .card {
+            @extend .flex--column;
+            background-color: #f9bdbd;
+            border-radius: 0 100px;
+            width: fit-content;
+            min-width: 280px;
+            height: 360px;
+            padding: 12px 16px;
+
+            .card--title {
+                @extend .nunito-800;
+                margin: 0;
+                font-size: 24px;
+            }
+
+            .card--preview {
+                width: 60%;
+                margin: auto;
+                // flex: 1;
+            }
+            .card--button {
+                @extend .nunito-600;
+                align-self: flex-end;
+                // margin: 50px 16px 12px 0;
+                width: fit-content;
+                border-radius: 4px;
+                border: 1px solid black;
+                background: transparent;
+                padding: 6px 12px;
+            }
+        }
+    }
+}

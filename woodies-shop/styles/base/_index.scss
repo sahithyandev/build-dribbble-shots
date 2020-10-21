@@ -9,6 +9,13 @@
 .bold {
     @extend .nunito-700;
 }
+.flex {
+    display: flex;
+}
+.flex--column {
+    @extend .flex;
+    flex-direction: column;
+}
 
 // Overrides
 

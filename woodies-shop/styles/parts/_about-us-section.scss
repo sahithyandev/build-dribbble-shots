@@ -1,0 +1,34 @@
+#about-us-section {
+    .image-section {
+        @extend .flex;
+        gap: 20px;
+        align-items: center;
+        margin: 20px 0;
+
+        img {
+            // width: 40%;
+        }
+
+        .image-section--content {
+            @extend .nunito-600;
+            max-width: 50%;
+            h2 {
+                font-size: 2em;
+                color: #3e3f43;
+
+                span.bold {
+                    font-weight: 800 !important;
+                }
+            }
+            p {
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    .image-section:nth-child(3) {
+        img {
+            margin-left: auto;
+        }
+    }
+}

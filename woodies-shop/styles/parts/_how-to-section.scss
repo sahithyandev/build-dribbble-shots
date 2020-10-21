@@ -1,0 +1,31 @@
+#how-to-section {
+    counter-reset: my-counter;
+    @extend .flex--column;
+
+    .content {
+        margin: 40px 0;
+        @extend .flex;
+        justify-content: space-around;
+
+        .content--item {
+            @extend .flex--column;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                @extend .nunito-600;
+                counter-increment: my-counter;
+                content: counter(my-counter);
+                font-size: 5.8em;
+                color: rgba(249, 189, 189, 0.25);
+                position: absolute;
+                left: -40px;
+                top: 20%;
+            }
+        }
+    }
+
+    button {
+        align-self: center;
+    }
+}

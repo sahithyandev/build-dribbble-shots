@@ -1,4 +1,4 @@
-.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, .nunito-600, .nunito-700, .bold, #hero-section .heading, #hero-section button, .nunito-800, header nav .nav--link.active, body {
+.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, .nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button, .nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .section button.call-to-action, .nunito-800, header nav .nav--link.active, #categories-section .content .card .card--title, .section .section--heading .section--heading__secondary, body {
   font-family: "Nunito";
 }
 
@@ -6,20 +6,33 @@
   font-weight: 400;
 }
 
-.nunito-600 {
+.nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button {
   font-weight: 600;
 }
 
-.nunito-700, .bold, #hero-section .heading, #hero-section button {
+.nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .section button.call-to-action {
   font-weight: 700;
 }
 
-.nunito-800, header nav .nav--link.active {
+.nunito-800, header nav .nav--link.active, #categories-section .content .card .card--title, .section .section--heading .section--heading__secondary {
   font-weight: 800;
 }
 
-.uppercase {
+.uppercase, .section .section--heading .section--heading__secondary {
   text-transform: uppercase;
+}
+
+.flex, .flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card, header, header nav, #about-us-section .image-section, #how-to-section .content, #categories-section .content, .section .section--heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 a {
@@ -32,9 +45,6 @@ button {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -46,9 +56,6 @@ header {
 header nav {
   margin-left: auto;
   margin-right: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 20px;
 }
 
@@ -95,17 +102,6 @@ header button {
   margin-bottom: 40px;
 }
 
-#hero-section button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: white;
-  background: #daa520;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 4px;
-}
-
 #hero-section img {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -114,6 +110,158 @@ header button {
   grid-row: 1 / 5;
   width: 80%;
   justify-self: flex-end;
+}
+
+#about-us-section .image-section {
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+#about-us-section .image-section .image-section--content {
+  max-width: 50%;
+}
+
+#about-us-section .image-section .image-section--content h2 {
+  font-size: 2em;
+  color: #3e3f43;
+}
+
+#about-us-section .image-section .image-section--content h2 span.bold {
+  font-weight: 800 !important;
+}
+
+#about-us-section .image-section .image-section--content p {
+  font-size: 1.3em;
+}
+
+#about-us-section .image-section:nth-child(3) img {
+  margin-left: auto;
+}
+
+#how-to-section {
+  counter-reset: my-counter;
+}
+
+#how-to-section .content {
+  margin: 40px 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#how-to-section .content .content--item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#how-to-section .content .content--item::before {
+  counter-increment: my-counter;
+  content: counter(my-counter);
+  font-size: 5.8em;
+  color: rgba(249, 189, 189, 0.25);
+  position: absolute;
+  left: -40px;
+  top: 20%;
+}
+
+#how-to-section button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#categories-section .content {
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#categories-section .content .card {
+  background-color: #f9bdbd;
+  border-radius: 0 100px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 280px;
+  height: 360px;
+  padding: 12px 16px;
+}
+
+#categories-section .content .card .card--title {
+  margin: 0;
+  font-size: 24px;
+}
+
+#categories-section .content .card .card--preview {
+  width: 60%;
+  margin: auto;
+}
+
+#categories-section .content .card .card--button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  border: 1px solid black;
+  background: transparent;
+  padding: 6px 12px;
+}
+
+.section {
+  margin: 40px 0;
+}
+
+.section .section--heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.section .section--heading .section--heading__primary {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2em;
+}
+
+.section .section--heading .section--heading__primary::before {
+  content: url("./../assets/logo-icon.svg");
+  vertical-align: center;
+  margin-right: 4px;
+}
+
+.section .section--heading .divider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #000000;
+}
+
+.section .section--heading .section--heading__secondary {
+  font-size: 4em;
+  color: rgba(34, 34, 34, 0.1);
+}
+
+.section button.call-to-action {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: #daa520;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 4px;
 }
 
 :root {
