@@ -20,6 +20,8 @@
             &::before {
                 content: url("./../assets/logo-icon.svg");
                 vertical-align: center;
+                display: inline-flex;
+                align-items: center;
                 margin-right: 4px;
             }
         }

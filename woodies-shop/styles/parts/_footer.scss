@@ -79,14 +79,10 @@ footer {
     img {
         justify-self: flex-end;
         width: 58%;
-        // position: relative;
-        // right: calc(-1 * var(--body-padding));
     }
 }
 
 .column {
-    // background: red;
-    display: flex;
-    flex-direction: column;
+    @extend .flex--column;
     gap: 7px;
 }

@@ -1,4 +1,4 @@
-.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, footer .subscribe-section .input-container input, .nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button, .nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .call-to-action, .nunito-800, header nav .nav--link.active, #categories-section .content .card .card--title, .section .section--heading .section--heading__secondary, body {
+.nunito, .nunito-400, header nav .nav--link, #hero-section .sub-heading, footer .subscribe-section .input-container input, .nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button, #testimonial-section .content .testimonial-container .testimonial-card .testimonial-card--author .author--name, .nunito-700, .bold, #hero-section .heading, .section .section--heading .section--heading__primary, .call-to-action, .nunito-800, header nav .nav--link.active, #categories-section .content .card .card--title, .section .section--heading .section--heading__secondary, body {
   font-family: "Nunito";
 }
 
@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button {
+.nunito-600, #about-us-section .image-section .image-section--content, #how-to-section .content .content--item::before, #categories-section .content .card .card--button, #testimonial-section .content .testimonial-container .testimonial-card .testimonial-card--author .author--name {
   font-weight: 600;
 }
 
@@ -22,13 +22,13 @@
   text-transform: uppercase;
 }
 
-.flex, .flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card, header, header nav, #about-us-section .image-section, #how-to-section .content, #categories-section .content, footer .subscribe-section .input-container, .section .section--heading {
+.flex, .flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card, .column, header, header nav, #about-us-section .image-section, #how-to-section .content, #categories-section .content, #testimonial-section .content, .testimonial-controls, .testimonial-controls #testimonial-bubbles, footer .subscribe-section .input-container, .section .section--heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card {
+.flex--column, #how-to-section, #how-to-section .content .content--item, #categories-section .content .card, .column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -230,6 +230,101 @@ header button {
   background-color: #a8dcec;
 }
 
+#testimonial-section .content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+#testimonial-section .content .image {
+  border-radius: 100px 0;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+#testimonial-section .content .testimonial-container .testimonial-card {
+  border: 1px solid #a8dcec;
+  border-radius: 0 100px;
+  padding: 40px 20px;
+}
+
+#testimonial-section .content .testimonial-container .testimonial-card .star-section i.fa-star {
+  color: #ffc107;
+}
+
+#testimonial-section .content .testimonial-container .testimonial-card .testimonial-card--author {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+#testimonial-section .content .testimonial-container .testimonial-card .testimonial-card--author .author--image {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+#testimonial-section .content .testimonial-container .testimonial-card .testimonial-card--author .author--name {
+  display: inline-block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 20px;
+  color: #afafaf;
+  max-width: 140px;
+}
+
+.testimonial-controls {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  color: #3e3f43;
+}
+
+.testimonial-controls .disabled {
+  color: #c4c4c4;
+}
+
+.testimonial-controls #testimonial-bubbles {
+  gap: 8px;
+}
+
+.testimonial-controls #testimonial-bubbles .bubble {
+  background-color: #e5e5e5;
+  width: 45px;
+  height: 8px !important;
+  border-radius: 20px;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.testimonial-controls #testimonial-bubbles .bubble.selected {
+  background-color: #daa520;
+}
+
+.testimonial-controls .control-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
 footer {
   padding: 40px var(--body-padding) 0;
   background-color: #e5e5e5;
@@ -344,13 +439,6 @@ footer img {
 }
 
 .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 7px;
 }
 
@@ -379,6 +467,12 @@ footer img {
 .section .section--heading .section--heading__primary::before {
   content: url("./../assets/logo-icon.svg");
   vertical-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 4px;
 }
 
