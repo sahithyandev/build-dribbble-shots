@@ -63,10 +63,20 @@ header nav .nav--link {
   font-size: 1em;
   line-height: 22px;
   color: rgba(34, 34, 34, 0.75);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 header nav .nav--link.active {
   color: #daa520;
+}
+
+header nav .nav--link.active:hover {
+  color: rgba(218, 165, 32, 0.85);
+}
+
+header nav .nav--link:hover {
+  color: rgba(34, 34, 34, 0.45);
 }
 
 header button {
@@ -74,6 +84,14 @@ header button {
   border-radius: 8px;
   border: 1px solid #3e3f43;
   padding: 7px 20px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+header button:hover {
+  background: #daa520;
+  color: white;
+  border-color: #daa520;
 }
 
 #hero-section {
@@ -323,6 +341,7 @@ header button {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 footer {
@@ -497,6 +516,12 @@ footer img {
   border: none;
   padding: 14px 24px;
   border-radius: 4px;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.call-to-action:hover {
+  background-color: rgba(218, 165, 32, 0.8);
 }
 
 :root {

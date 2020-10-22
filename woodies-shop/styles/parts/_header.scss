@@ -8,16 +8,25 @@ header {
         margin-right: 40px;
         @extend .flex;
         gap: 20px;
+
         .nav--link {
             @extend .nunito-400;
             font-size: 1em;
             line-height: 22px;
             // letter-spacing: 0em;
             color: rgba(34, 34, 34, 0.75);
+            transition: all 0.3s ease;
 
             &.active {
                 @extend .nunito-800;
                 color: #daa520;
+
+                &:hover {
+                    color: rgba(#daa520, 0.85);
+                }
+            }
+            &:hover {
+                color: rgba(34, 34, 34, 0.45);
             }
         }
     }
@@ -27,5 +36,12 @@ header {
         border-radius: 8px;
         border: 1px solid #3e3f43;
         padding: 7px 20px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #daa520;
+            color: white;
+            border-color: #daa520;
+        }
     }
 }
