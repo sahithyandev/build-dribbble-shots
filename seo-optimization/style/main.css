@@ -1,0 +1,24 @@
+.uppercase, footer .group .group--title, footer .group .group--item-container .group--item {
+  text-transform: uppercase;
+}
+
+.reset-a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

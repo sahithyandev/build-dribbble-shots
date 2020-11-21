@@ -1,0 +1,26 @@
+@import "abstract";
+
+body {
+  margin: 0;
+  font-family: "Raleway";
+}
+
+header {
+  display: flex;
+}
+
+footer {
+  display: flex;
+
+  .group {
+    .group--title {
+      @extend .uppercase;
+    }
+
+    .group--item-container {
+      .group--item {
+        @extend .uppercase;
+      }
+    }
+  }
+}
