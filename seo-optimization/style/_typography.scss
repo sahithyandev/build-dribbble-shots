@@ -1,0 +1,29 @@
+.roboto {
+  font-family: "Roboto";
+}
+.raleway {
+  font-family: "Raleway";
+}
+
+$fonts: (
+  "roboto": (
+    400,
+    500,
+    700,
+  ),
+  "raleway": (
+    400,
+    600,
+    700,
+    800,
+  ),
+);
+
+@each $font, $weights in $fonts {
+  @each $wght in $weights {
+    .#{$font}-#{$wght} {
+      @extend .#{$font};
+      font-weight: $wght;
+    }
+  }
+}

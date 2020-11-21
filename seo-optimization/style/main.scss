@@ -1,25 +1,102 @@
 @import "abstract";
+@import "typography";
 
 body {
   margin: 0;
-  font-family: "Raleway";
+  @extend .raleway;
+}
+
+.icon {
+  background-color: #383838;
+  color: white;
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
 }
 
 header {
   display: flex;
 }
 
+#hero-section {
+  padding: 40px;
+  .title {
+    font-size: 2.4em;
+    max-width: 300px;
+  }
+  .text {
+    max-width: 400px;
+    color: rgba(#333333, 0.5);
+  }
+  .call-to-action {
+  }
+  .bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+
 footer {
   display: flex;
+  justify-content: space-evenly;
 
   .group {
     .group--title {
       @extend .uppercase;
+      width: fit-content;
+      margin-bottom: 30px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 40%;
+        height: 2px;
+        background-color: #00a692;
+        position: relative;
+        bottom: -8px;
+      }
     }
 
-    .group--item-container {
+    .group--content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-weight: 500;
       .group--item {
         @extend .uppercase;
+      }
+    }
+  }
+
+  #recent-blog {
+    .blog-post {
+      opacity: 50%;
+      .blog-post--title {
+        margin: 2px 0;
+        font-weight: 600;
+      }
+      .blog-post--text {
+        max-width: 300px;
+      }
+    }
+  }
+
+  #social-media {
+    .group--content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .brand-name {
+        text-transform: initial;
+        margin-left: 6px;
       }
     }
   }
