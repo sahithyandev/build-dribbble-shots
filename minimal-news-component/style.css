@@ -1,0 +1,147 @@
+body, html {
+	margin: 0;
+	background: #e4e6eb;
+}
+
+.news-cards-container {
+	height: 100vh;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.news-card {
+	color: #3b3c3f;
+	font-family: Poppins, Roboto, sans-serif;
+	
+	height: fit-content;
+	width: 640px;
+	max-height: 500px;
+	max-width: 100vw;
+	
+	padding: 8px 12px 10px 8px;
+	border-radius: 12px;
+	background: white;
+	
+	display: grid;
+	grid-template-columns: 45% auto 40px;	
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas:
+		"img heading heading"
+		"img preview-content preview-content"
+		"img author share";
+	row-gap: 10px;
+	column-gap: 20px;
+}
+
+.news-card .preview {
+	height: 100%;
+	width: 100%;
+	
+	border-radius: inherit;
+	grid-area: img;
+	
+	background-image: url("https://i.picsum.photos/id/106/2592/1728.jpg?hmac=E1-3Hac5ffuCVwYwexdHImxbMFRsv83exZ2EhlYxkgY");
+	background-position: center;
+	background-size: cover;
+}
+
+.news-card .news-heading {
+	margin-top: 8px;
+	grid-area: heading;
+	line-height: 24px;
+}
+
+.news-card .preview-content,
+.news-card .author-date {
+	color: #768ca4;
+}
+
+.news-card .preview-content {	
+	grid-area: preview-content;
+	margin: 0;
+	line-height: 19px;
+	font-size: .9em;
+	margin-top: 6px;
+	margin-bottom: 10px;
+}
+
+.news-card .author {
+	margin-bottom: 10px;
+	font-size: .85em;
+	height: 100%;
+	
+	grid-area: author;
+	place-items: center left;
+	
+	display: grid;	
+	grid-template-columns: 36px auto;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"author-img author-name"
+		"author-img date";
+	column-gap: 10px;
+}
+
+.news-card .author .author-img {
+	border-radius: 50%;
+	width: 100%;
+	grid-area: author-img;
+	
+}
+
+.news-card .author .author-name {
+	grid-area: author-name;
+	margin-bottom: -11px;
+}
+
+.news-card .author .author-date {
+	grid-area: date;
+}
+
+.news-card h3, .news-card h4 {
+	margin: 0;
+}
+
+.news-card .share-icon-container {
+	grid-area: share;
+	opacity: .4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.news-card button {
+	--background: white;
+	--foreground: black;
+	--width: 30px;
+	
+	height: var(--width);
+	width: var(--width);
+	background: var(--background);
+	
+	color: var(--foreground);
+	border-radius: 50%;
+	transition: all .2s;
+	
+	cursor: pointer;
+	border: 0;
+}
+
+.news-card button:hover {
+	background: var(--foreground);
+	color: var(--background);
+}
+
+.news-card button:focus {
+	outline: none;
+	color: var(--background);
+	background: var(--foreground);
+}
+
+.news-card .share-icon-button .fa {
+	transform: rotate(-40deg);	
+}

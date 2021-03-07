@@ -33,5 +33,12 @@
         "designed-by": "Agri Fina",
         "dribbble-link": "https://dribbble.com/shots/11018704-Woodies-Furniture-Online-Shop-Landing-Page",
         "status": "in-progress"
+    },
+    {
+        "challenge-name": "Minimal News Component",
+        "challenge-directory": "./minimal-news-component",
+        "designed-by": "Vishnu Prasad",
+        "dribbble-link": "https://dribbble.com/shots/11116447-Minimal-News-Components",
+        "status": "in-progress"
     }
 ]
